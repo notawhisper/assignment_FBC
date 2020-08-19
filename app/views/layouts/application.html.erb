@@ -11,10 +11,6 @@
 
   <body>
     <div class="wrapper">
-      <% flash.each do |key, value| %>
-        <%= content_tag(:div, value, class: "#{key}") %>
-      <% end %>
-
       <header>
         <%= link_to "FBCblog", root_path , class: "links icon" %>
         <% if logged_in? %>
