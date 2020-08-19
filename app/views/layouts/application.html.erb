@@ -4,24 +4,37 @@
     <title>FBCblog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
-    <% end %>
+    <div class="wrapper">
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
 
-    <% if logged_in? %>
-      <%= link_to "Profile", user_path(current_user.id) %>
-      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_path %>
-      <%= link_to "Login", new_session_path %>
-    <% end %>
+      <header>
+        <%= link_to "FBCblog", root_path , class: "links icon" %>
+        <% if logged_in? %>
+          <%= link_to 'Share', new_picture_path, class: "links" %>
+          <%= link_to 'Look', pictures_path, class: "links" %>
+          <%= link_to "Profile", user_path(current_user.id) , class: "links" %>
+          <%= link_to "Logout", session_path(current_user.id), method: :delete , class: "links" %>
+        <% else %>
+          <%= link_to "Sign up", new_user_path , class: "links" %>
+          <%= link_to "Login", new_session_path , class: "links" %>
+        <% end %>
+      </header>
 
-    <%= yield %>
+      <div class="yield_wrapper">
+        <%= yield %>
+      </div>
+
+      <footer>
+        <h2>FBCblog</h2>
+      </footer>
+    </div>
   </body>
 </html>

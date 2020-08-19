@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def recognize_user
     current_user = User.find_by(id: session[:user_id]).id
-    unless current_user == @picture.id
+    unless current_user == @picture.user_id
       flash[:notice] = "この操作は本人のみに許可されています。"
       redirect_to pictures_path
     end
