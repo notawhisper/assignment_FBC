@@ -7,11 +7,13 @@
         <% if picture.image.present? %>
           <td><%= image_tag picture.image.url class:"image" %></td>
         <% end %>
+
         <% if picture.text.present? %>
           <td id="text"><%= picture.text %></td>
         <% else %>
           <td id="text">no text</td>
         <% end %>
+
         <td><strong>Posted By: </strong><%= picture.user.name %></td>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
