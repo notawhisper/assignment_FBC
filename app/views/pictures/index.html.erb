@@ -5,7 +5,7 @@
     <% @pictures.each do |picture| %>
       <tr>
         <% if picture.image.present? %>
-          <td><%= image_tag picture.image.url %></td>
+          <td><%= image_tag picture.image.url class:"image" %></td>
         <% end %>
         <% if picture.text.present? %>
           <td id="text"><%= picture.text %></td>
