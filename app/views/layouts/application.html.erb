@@ -25,7 +25,9 @@
       </header>
 
       <div class="yield_wrapper">
-        <p id="notice"><%= notice %></p>
+        <% if notice.present? %>
+          <p id="notice"><%= notice %></p>
+        <% end %>
         <%= yield %>
       </div>
 

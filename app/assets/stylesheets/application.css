@@ -23,7 +23,7 @@ body {
   width: 100%;
   position: relative;
   padding-top: 50px;
-    background-color: rgb(231, 241, 240);
+  background-color: rgb(231, 241, 240);
 }
 
 header {
@@ -56,6 +56,15 @@ header {
   margin-bottom: 75px;
 }
 
+#error_explanation {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.field_with_errors {
+  margin: 0 auto;
+}
+
 #notice {
   font-size: 20px;
   padding-top: 10px;
@@ -86,6 +95,10 @@ header {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
+}
+
+#text {
+  background-color: rgb(255, 255, 255);
 }
 
 footer {
