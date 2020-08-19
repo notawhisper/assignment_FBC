@@ -12,13 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
+    <%= form.label :image, class: "labels" %>
+    <div class="input_wrapper">
+      <%= form.file_field :image, class: "forms"  %>
+    </div>
 
   <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
+    <%= form.label :text, class: "labels" %>
+    <%= form.text_area :text, class: "forms" %>
   </div>
 
   <div class="field">
@@ -27,6 +28,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'share', class: "forms"%>
   </div>
 <% end %>

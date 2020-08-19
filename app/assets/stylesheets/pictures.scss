@@ -1,3 +1,13 @@
-// Place all the styles related to the Pictures controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.page_title {
+  margin: 0;
+  padding: 10px;
+}
+
+.labels {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.input_wrapper {
+  display: inline-block;
+}
