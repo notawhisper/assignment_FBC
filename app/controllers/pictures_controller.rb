@@ -1,5 +1,7 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
+  before_action :recognize_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user, only: [:create, :index]
 
   # GET /pictures
   # GET /pictures.json
@@ -70,6 +72,6 @@ class PicturesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def picture_params
-      params.require(:picture).permit(:image, :text, :user_id, :image_cache)
+      params.require(:picture).permit(:image, :text, :user_id)
     end
 end

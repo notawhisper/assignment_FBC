@@ -1,15 +1,107 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*= require bootstrap/dist/css/bootstrap.min
+*= require_tree .
+*= require_self
+*/
+
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: 50px;
+    background-color: rgb(231, 241, 240);
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(172, 220, 236);
+  position: absolute;
+  top: 0;
+  position: fixed;
+  display: table;
+}
+
+.links {
+  width: 15%;
+  font-size: 15px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.icon {
+  font-size: 25px;
+  width: 20%;
+}
+
+.yield_wrapper {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+#notice {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.page_title {
+  margin: 0;
+  padding: 10px;
+}
+
+.labels {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.top {
+  height: 90vh;
+  width: 100%;
+  background-image: url("waterfall.jpg");
+  background-size: cover;
+  margin: 0;
+  display: table;
+}
+
+.top h3 {
+  color: white;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+footer {
+  width: 100%;
+  height: 75px;
+  background-color: rgb(172, 220, 236);
+  display: table;
+  position: absolute;
+  bottom: 0;
+  position: fixed;
+
+}
+
+footer h2 {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+}

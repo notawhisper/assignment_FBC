@@ -1,3 +1,14 @@
-// Place all the styles related to the Pictures controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.input_wrapper {
+  display: inline-block;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 75px;
+}
+
+table td {
+  width: 500px;
+  display:block;
+  margin: 0 auto;
+}
