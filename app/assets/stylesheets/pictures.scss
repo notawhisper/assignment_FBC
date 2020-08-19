@@ -8,12 +8,13 @@
 }
 
 table {
+  width: 100%;
   margin-bottom: 75px;
 }
 
-table th,
-table td {
-  width:100%;
 
+table td {
+  width: 500px;
   display:block;
+  margin: 0 auto;
 }
