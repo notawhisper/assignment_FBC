@@ -55,6 +55,11 @@ header {
 
 }
 
+.page_title {
+  margin: 0;
+  padding: 10px;
+}
+
 .top {
   height: 90vh;
   width: 100%;
