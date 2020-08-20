@@ -16,8 +16,8 @@
 
         <td><strong>Posted By: </strong><%= picture.user.name %></td>
         <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_picture_path(picture), style: "#{'display:none' unless picture.user_id == current_user.id}" %></td>
+        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } , style: "#{'display:none' unless picture.user_id == current_user.id}" %></td>
       </tr>
     <% end %>
   </tbody>
