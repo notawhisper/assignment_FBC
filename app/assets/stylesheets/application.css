@@ -81,14 +81,14 @@ header {
   padding: 10px;
 }
 
-.top {
+/* .top {
   height: 90vh;
   width: 100%;
-  background-image: image-url('waterfall.jpg');
+  background-image: url("waterfall.jpg");
   background-size: cover;
   margin: 0;
   display: table;
-}
+} */
 
 .top h3 {
   color: white;
